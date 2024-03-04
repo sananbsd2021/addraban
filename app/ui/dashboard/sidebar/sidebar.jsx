@@ -40,8 +40,18 @@ const menuItems = [
         icon: <MdAttachMoney />,
       },
       {
-        title: "สารบรรณ",
+        title: "หนังสือรับ",
         path: "/dashboard/sarabans",
+        icon: <MdAttachMoney />,
+      },
+      {
+        title: "หนังสือส่ง",
+        path: "/dashboard/sarabans1",
+        icon: <MdAttachMoney />,
+      },
+      {
+        title: "บันทึกข้อความ",
+        path: "/dashboard/sarabans2",
         icon: <MdAttachMoney />,
       },
     ],
