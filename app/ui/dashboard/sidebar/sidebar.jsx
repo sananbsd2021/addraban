@@ -54,6 +54,11 @@ const menuItems = [
         path: "/dashboard/sarabans",
         icon: <MdAttachMoney />,
       },
+      {
+        title: "ที่คำสั่ง",
+        path: "/dashboard/bookbid",
+        icon: <MdAttachMoney />,
+      },
     ],
   },
   {
