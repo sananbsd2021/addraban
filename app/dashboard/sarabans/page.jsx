@@ -23,8 +23,6 @@ const ProductsPage = async ({ searchParams }) => {
           <tr>
             <td>เลขทะเบียน</td>
             <td>รายละเอียด</td>
-            {/* <td>Price</td>
-            <td>Stock</td> */}
             <td>หน่วยงาน</td>
             <td>ผู้รับ</td>
             <td>Created At</td>
@@ -40,8 +38,6 @@ const ProductsPage = async ({ searchParams }) => {
                 </div>
               </td>
               <td>{saraban.desc}</td>
-              {/* <td>${product2.price}</td>
-              <td>{product2.stock}</td> */}
               <td>{saraban.desc2}</td>
               <td>{saraban.desc3}</td>
               <td>{saraban.createdAt?.toString().slice(4, 16)}</td>
