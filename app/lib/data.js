@@ -1,4 +1,4 @@
-import { Product, Product2, User, Palad, Saraban } from "./models";
+import { Product, Product2, User, Saraban, Booksend, Bookaccept } from "./models";
 import { connectToDB } from "./utils";
 
 export const fetchUsers = async (q, page) => {
@@ -116,36 +116,6 @@ export const fetchProduct2 = async (id) => {
 };
 
 
-export const fetchPalads = async (q, page) => {
-  console.log(q);
-  const regex = new RegExp(q, "i");
-
-  const ITEM_PER_PAGE = 10;
-
-  try {
-    connectToDB();
-    const count = await Palad.find({ title: { $regex: regex } }).count();
-    const palads = await Palad.find({ title: { $regex: regex } })
-      .limit(ITEM_PER_PAGE)
-      .skip(ITEM_PER_PAGE * (page - 1));
-    return { count, palads };
-  } catch (err) {
-    console.log(err);
-    throw new Error("Failed to fetch palads!");
-  }
-};
-
-export const fetchPalad = async (id) => {
-  try {
-    connectToDB();
-    const palad = await Palad.findById(id);
-    return palad;
-  } catch (err) {
-    console.log(err);
-    throw new Error("Failed to fetch palad!");
-  }
-};
-
 // Fetch Saraban
 export const fetchSarabans = async (q, page) => {
   console.log(q);
@@ -174,5 +144,68 @@ export const fetchSaraban = async (id) => {
   } catch (err) {
     console.log(err);
     throw new Error("Failed to fetch Saraban!");
+  }
+};
+
+// Fetch Booksend
+export const fetchBooksends = async (q, page) => {
+  console.log(q);
+  const regex = new RegExp(q, "i");
+
+  const ITEM_PER_PAGE = 5;
+
+  try {
+    connectToDB();
+    const count = await Booksend.find({ title: { $regex: regex } }).count();
+    const booksends = await Booksend.find({ title: { $regex: regex } })
+      .limit(ITEM_PER_PAGE)
+      .skip(ITEM_PER_PAGE * (page - 1));
+    return { count, booksends };
+  } catch (err) {
+    console.log(err);
+    throw new Error("Failed to fetch booksends!");
+  }
+};
+
+export const fetchBooksend = async (id) => {
+  try {
+    connectToDB();
+    const booksend = await Booksend.findById(id);
+    return booksend;
+  } catch (err) {
+    console.log(err);
+    throw new Error("Failed to fetch booksend!");
+  }
+};
+
+
+// Fetch Bookaccept
+export const fetchBookaccepts = async (q, page) => {
+  console.log(q);
+  const regex = new RegExp(q, "i");
+
+  const ITEM_PER_PAGE = 5;
+
+  try {
+    connectToDB();
+    const count = await Bookaccept.find({ title: { $regex: regex } }).count();
+    const bookaccepts = await Bookaccept.find({ title: { $regex: regex } })
+      .limit(ITEM_PER_PAGE)
+      .skip(ITEM_PER_PAGE * (page - 1));
+    return { count, bookaccepts };
+  } catch (err) {
+    console.log(err);
+    throw new Error("Failed to fetch bookaccept!");
+  }
+};
+
+export const fetchBookaccept = async (id) => {
+  try {
+    connectToDB();
+    const bookaccept = await Bookaccept.findById(id);
+    return bookaccept;
+  } catch (err) {
+    console.log(err);
+    throw new Error("Failed to fetch bookaccept!");
   }
 };

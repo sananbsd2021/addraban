@@ -1,7 +1,15 @@
 "use server";
 
 import { revalidatePath } from "next/cache";
-import { Product, Product2, User, Palad, Saraban } from "./models";
+import {
+  Product,
+  Product2,
+  User,
+  Palad,
+  Saraban,
+  Booksend,
+  Bookaccept,
+} from "./models";
 import { connectToDB } from "./utils";
 import { redirect } from "next/navigation";
 import bcrypt from "bcrypt";
@@ -170,7 +178,7 @@ export const authenticate = async (prevState, formData) => {
 // Add Product2
 
 export const addProduct2 = async (formData) => {
-  const { title, desc, desc2 , desc3, price, stock } =
+  const { title, desc, desc2, desc3, price, stock } =
     Object.fromEntries(formData);
 
   try {
@@ -227,7 +235,6 @@ export const updateProduct2 = async (formData) => {
   redirect("/dashboard/palads");
 };
 
-
 export const deleteProduct2 = async (formData) => {
   const { id } = Object.fromEntries(formData);
 
@@ -243,8 +250,7 @@ export const deleteProduct2 = async (formData) => {
 };
 
 export const addPalad = async (formData) => {
-  const { number, title, desc } =
-    Object.fromEntries(formData);
+  const { number, title, desc } = Object.fromEntries(formData);
 
   try {
     connectToDB();
@@ -265,10 +271,8 @@ export const addPalad = async (formData) => {
   redirect("/dashboard/palads");
 };
 
-
 export const updatePalad = async (formData) => {
-  const { id, number, title, desc } =
-    Object.fromEntries(formData);
+  const { id, number, title, desc } = Object.fromEntries(formData);
 
   try {
     connectToDB();
@@ -310,8 +314,7 @@ export const deletePalad = async (formData) => {
 
 // Add Saraban
 export const addSaraban = async (formData) => {
-  const { title, desc, desc2, desc3 } =
-    Object.fromEntries(formData);
+  const { title, desc, desc2, year } = Object.fromEntries(formData);
 
   try {
     connectToDB();
@@ -320,7 +323,9 @@ export const addSaraban = async (formData) => {
       title,
       desc,
       desc2,
-      desc3,
+      year,
+      // desc3,
+      // desc4,
     });
 
     await newSaraban.save();
@@ -335,8 +340,7 @@ export const addSaraban = async (formData) => {
 
 // Update Saraban
 export const updateSaraban = async (formData) => {
-  const { id, title, desc, desc2, desc3 } =
-    Object.fromEntries(formData);
+  const { id, title, desc, desc2, year } = Object.fromEntries(formData);
 
   try {
     connectToDB();
@@ -345,7 +349,9 @@ export const updateSaraban = async (formData) => {
       title,
       desc,
       desc2,
-      desc3,
+      year,
+      // desc3,
+      // desc4,
     };
 
     Object.keys(updateFields).forEach(
@@ -376,4 +382,150 @@ export const deleteSaraban = async (formData) => {
   }
 
   revalidatePath("/dashboard/sarabans");
+};
+
+// Add Booksend
+export const addBooksend = async (formData) => {
+  const { title, desc, desc2, desc3, desc4, year } =
+    Object.fromEntries(formData);
+
+  try {
+    connectToDB();
+
+    const newBooksend = new Booksend({
+      title,
+      desc,
+      desc2,
+      desc3,
+      desc4,
+      year,
+    });
+
+    await newBooksend.save();
+  } catch (err) {
+    console.log(err);
+    throw new Error("Failed to create Booksend!");
+  }
+
+  revalidatePath("/dashboard/booksends");
+  redirect("/dashboard/booksends");
+};
+
+// Update Saraban
+export const updateBooksend = async (formData) => {
+  const { id, title, desc, desc2, desc3, desc4, year } =
+    Object.fromEntries(formData);
+
+  try {
+    connectToDB();
+
+    const updateFields = {
+      title,
+      desc,
+      desc2,
+      desc3,
+      desc4,
+      year,
+    };
+
+    Object.keys(updateFields).forEach(
+      (key) =>
+        (updateFields[key] === "" || undefined) && delete updateFields[key]
+    );
+
+    await Booksend.findByIdAndUpdate(id, updateFields);
+  } catch (err) {
+    console.log(err);
+    throw new Error("Failed to update Booksend!");
+  }
+
+  revalidatePath("/dashboard/booksends");
+  redirect("/dashboard/booksends");
+};
+
+// Delete Saraban
+export const deleteBooksend = async (formData) => {
+  const { id } = Object.fromEntries(formData);
+
+  try {
+    connectToDB();
+    await Booksend.findByIdAndDelete(id);
+  } catch (err) {
+    console.log(err);
+    throw new Error("Failed to delete Booksend!");
+  }
+
+  revalidatePath("/dashboard/booksends");
+};
+
+// Add Bookaccept
+export const addBookaccept = async (formData) => {
+  const { title, desc, desc2, desc3, desc4, year } = Object.fromEntries(formData);
+
+  try {
+    connectToDB();
+
+    const newBookaccept = new Bookaccept({
+      title,
+      desc,
+      desc2,
+      desc3,
+      desc4,
+      year,
+    });
+
+    await newBookaccept.save();
+  } catch (err) {
+    console.log(err);
+    throw new Error("Failed to create Bookaccept!");
+  }
+
+  revalidatePath("/dashboard/bookaccept");
+  redirect("/dashboard/bookaccept");
+};
+
+// Update Bookaccept
+export const updateBookaccept = async (formData) => {
+  const { id, title, desc, desc2, desc3, desc4, year} = Object.fromEntries(formData);
+
+  try {
+    connectToDB();
+
+    const updateFields = {
+      title,
+      desc,
+      desc2,
+      desc3,
+      desc4,
+      year,
+    };
+
+    Object.keys(updateFields).forEach(
+      (key) =>
+        (updateFields[key] === "" || undefined) && delete updateFields[key]
+    );
+
+    await Bookaccept.findByIdAndUpdate(id, updateFields);
+  } catch (err) {
+    console.log(err);
+    throw new Error("Failed to update Bookaccept!");
+  }
+
+  revalidatePath("/dashboard/bookaccept");
+  redirect("/dashboard/bookaccept");
+};
+
+// Delete Bookaccept
+export const deleteBookaccept = async (formData) => {
+  const { id } = Object.fromEntries(formData);
+
+  try {
+    connectToDB();
+    await Bookaccept.findByIdAndDelete(id);
+  } catch (err) {
+    console.log(err);
+    throw new Error("Failed to delete Bookaccept!");
+  }
+
+  revalidatePath("/dashboard/bookaccept");
 };
