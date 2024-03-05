@@ -41,17 +41,17 @@ const menuItems = [
       },
       {
         title: "หนังสือรับ",
-        path: "/dashboard/sarabans",
-        icon: <MdAttachMoney />,
+        path: "/dashboard/bookaccept",
+        icon: <MdShoppingBag />,
       },
       {
         title: "หนังสือส่ง",
-        path: "/dashboard/sarabans1",
+        path: "/dashboard/booksends",
         icon: <MdAttachMoney />,
       },
       {
         title: "บันทึกข้อความ",
-        path: "/dashboard/sarabans2",
+        path: "/dashboard/sarabans",
         icon: <MdAttachMoney />,
       },
     ],
