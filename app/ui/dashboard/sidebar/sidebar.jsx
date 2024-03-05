@@ -24,21 +24,21 @@ const menuItems = [
         path: "/dashboard",
         icon: <MdDashboard />,
       },
-      {
-        title: "Users",
-        path: "/dashboard/users",
-        icon: <MdSupervisedUserCircle />,
-      },
-      {
-        title: "Products",
-        path: "/dashboard/products",
-        icon: <MdShoppingBag />,
-      },
-      {
-        title: "Transactions",
-        path: "/dashboard/transactions",
-        icon: <MdAttachMoney />,
-      },
+//      {
+//        title: "Users",
+//        path: "/dashboard/users",
+//        icon: <MdSupervisedUserCircle />,
+//      },
+//      {
+//        title: "Products",
+//        path: "/dashboard/products",
+//        icon: <MdShoppingBag />,
+//      },
+//      {
+//        title: "Transactions",
+//        path: "/dashboard/transactions",
+//        icon: <MdAttachMoney />,
+//      },
       {
         title: "หนังสือรับ",
         path: "/dashboard/bookaccept",
