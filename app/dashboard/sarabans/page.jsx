@@ -24,7 +24,7 @@ const ProductsPage = async ({ searchParams }) => {
             <td>เลขทะเบียน</td>
             <td>รายละเอียด</td>
             <td>หน่วยงาน</td>
-            <td>ผู้รับ</td>
+            <td>ปี พ.ศ.</td>
             <td>Created At</td>
             <td>Action</td>
           </tr>
@@ -39,7 +39,7 @@ const ProductsPage = async ({ searchParams }) => {
               </td>
               <td>{saraban.desc}</td>
               <td>{saraban.desc2}</td>
-              <td>{saraban.desc3}</td>
+              <td>{saraban.year}</td>
               <td>{saraban.createdAt?.toString().slice(4, 16)}</td>
               <td>
                 <div className={styles.buttons}>
