@@ -209,8 +209,40 @@ const bookacceptSchema = new mongoose.Schema(
     },    
   },
   { timestamps: true }
-);    
+); 
 
+
+const bookbidSchema = new mongoose.Schema(
+  {
+    title: {
+      type: String,
+      required: true,
+      unique: true,
+    },
+    desc: {
+      type: String,
+      required: true,
+    },
+    desc2: {
+      type: String,
+      required: true,
+    },    
+    desc3: {
+      type: String,
+      required: true,
+    },    
+    desc4: {
+      type: String,
+      required: true,
+    },  
+    year: {
+      type: String,
+    },    
+  },
+  { timestamps: true }
+);
+
+export const Bookbid = mongoose.models.Bookbid || mongoose.model("Bookbid", bookbidSchema);
 export const Bookaccept = mongoose.models.Bookaccept || mongoose.model("Bookaccept", bookacceptSchema);
 export const Booksend = mongoose.models.Booksend || mongoose.model("Booksend", booksendSchema);
 export const User = mongoose.models.User || mongoose.model("User", userSchema);
