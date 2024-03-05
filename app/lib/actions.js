@@ -9,6 +9,7 @@ import {
   Saraban,
   Booksend,
   Bookaccept,
+  Bookbid,
 } from "./models";
 import { connectToDB } from "./utils";
 import { redirect } from "next/navigation";
@@ -528,4 +529,76 @@ export const deleteBookaccept = async (formData) => {
   }
 
   revalidatePath("/dashboard/bookaccept");
+};
+
+// Add Bookbid
+export const addBookbid = async (formData) => {
+  const { title, desc, desc2, desc3, desc4, year } = Object.fromEntries(formData);
+
+  try {
+    connectToDB();
+
+    const newBookbid = new Bookbid({
+      title,
+      desc,
+      desc2,
+      desc3,
+      desc4,
+      year,
+    });
+
+    await newBookbid.save();
+  } catch (err) {
+    console.log(err);
+    throw new Error("Failed to create Bookbid!");
+  }
+
+  revalidatePath("/dashboard/bookbid");
+  redirect("/dashboard/bookbid");
+};
+
+// Update Bookbid
+export const updateBookbid = async (formData) => {
+  const { id, title, desc, desc2, desc3, desc4, year} = Object.fromEntries(formData);
+
+  try {
+    connectToDB();
+
+    const updateFields = {
+      title,
+      desc,
+      desc2,
+      desc3,
+      desc4,
+      year,
+    };
+
+    Object.keys(updateFields).forEach(
+      (key) =>
+        (updateFields[key] === "" || undefined) && delete updateFields[key]
+    );
+
+    await Bookbid.findByIdAndUpdate(id, updateFields);
+  } catch (err) {
+    console.log(err);
+    throw new Error("Failed to update Bookbid!");
+  }
+
+  revalidatePath("/dashboard/bookbid");
+  redirect("/dashboard/bookbid");
+};
+
+// Delete Bookbid
+export const deleteBookbid = async (formData) => {
+  const { id } = Object.fromEntries(formData);
+
+  try {
+    connectToDB();
+    await Bookbid.findByIdAndDelete(id);
+  } catch (err) {
+    console.log(err);
+    throw new Error("Failed to delete Bookbid!");
+  }
+
+  revalidatePath("/dashboard/bookbid");
 };
