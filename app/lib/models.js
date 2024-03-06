@@ -215,8 +215,7 @@ const bookacceptSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-
-const bookbidSchema = new mongoose.Schema(
+const booksetbidSchema = new mongoose.Schema(
   {
     title: {
       type: String,
@@ -234,10 +233,10 @@ const bookbidSchema = new mongoose.Schema(
     },    
     desc4: {
       type: String,
-    },  
+    },
     desc5: {
       type: String,
-    },  
+    },    
     desc6: {
       type: String,
     },  
@@ -248,7 +247,7 @@ const bookbidSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-export const Bookbid = mongoose.models.Bookbid || mongoose.model("Bookbid", bookbidSchema);
+export const Booksetbid = mongoose.models.Booksetbid || mongoose.model("Booksetbid", booksetbidSchema);
 export const Bookaccept = mongoose.models.Bookaccept || mongoose.model("Bookaccept", bookacceptSchema);
 export const Booksend = mongoose.models.Booksend || mongoose.model("Booksend", booksendSchema);
 export const User = mongoose.models.User || mongoose.model("User", userSchema);
