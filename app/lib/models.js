@@ -160,26 +160,28 @@ const booksendSchema = new mongoose.Schema(
     },
     desc: {
       type: String,
-      required: true,
     },
     desc2: {
       type: String,
-      required: true,
     },    
     desc3: {
       type: String,
-      required: true,
     },    
     desc4: {
       type: String,
-      required: true,
+    },  
+    desc5: {
+      type: String,
+    },  
+    desc6: {
+      type: String,
     },  
     year: {
       type: String,
     },    
   },
   { timestamps: true }
-);    
+);
 
 const bookacceptSchema = new mongoose.Schema(
   {
@@ -190,26 +192,28 @@ const bookacceptSchema = new mongoose.Schema(
     },
     desc: {
       type: String,
-      required: true,
     },
     desc2: {
       type: String,
-      required: true,
     },    
     desc3: {
       type: String,
-      required: true,
     },    
     desc4: {
       type: String,
-      required: true,
+    },  
+    desc5: {
+      type: String,
+    },  
+    desc6: {
+      type: String,
     },  
     year: {
       type: String,
     },    
   },
   { timestamps: true }
-); 
+);
 
 
 const bookbidSchema = new mongoose.Schema(
@@ -221,19 +225,21 @@ const bookbidSchema = new mongoose.Schema(
     },
     desc: {
       type: String,
-      required: true,
     },
     desc2: {
       type: String,
-      required: true,
     },    
     desc3: {
       type: String,
-      required: true,
     },    
     desc4: {
       type: String,
-      required: true,
+    },  
+    desc5: {
+      type: String,
+    },  
+    desc6: {
+      type: String,
     },  
     year: {
       type: String,
