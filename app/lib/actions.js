@@ -9,7 +9,7 @@ import {
   Saraban,
   Booksend,
   Bookaccept,
-  Bookbid,
+  Booksetbid,
 } from "./models";
 import { connectToDB } from "./utils";
 import { redirect } from "next/navigation";
@@ -522,7 +522,7 @@ export const updateBookaccept = async (formData) => {
   redirect("/dashboard/bookaccept");
 };
 
-// Delete Bookaccept
+// Delete Booksetbid
 export const deleteBookaccept = async (formData) => {
   const { id } = Object.fromEntries(formData);
 
@@ -537,35 +537,37 @@ export const deleteBookaccept = async (formData) => {
   revalidatePath("/dashboard/bookaccept");
 };
 
-// Add Bookbid
-export const addBookbid = async (formData) => {
-  const { title, desc, desc2, desc3, desc4, year } = Object.fromEntries(formData);
+// Add Bookaccept
+export const addBooksetbid = async (formData) => {
+  const { title, desc, desc2, desc3, desc4, desc5, desc6, year } = Object.fromEntries(formData);
 
   try {
     connectToDB();
 
-    const newBookbid = new Bookbid({
-      title,
-      desc,
-      desc2,
-      desc3,
-      desc4,
+    const newBooksetbid = new Booksetbid({
+      title,//เลขรับ
+      desc,//เรื่อง
+      desc2,//ที่หนังสือ
+      desc3,//ลงวันที่
+      desc4,//จาก
+      desc5,//ถึง
+      desc6,//หมายเหตุ
       year,
     });
 
-    await newBookbid.save();
+    await newBooksetbid.save();
   } catch (err) {
     console.log(err);
     throw new Error("Failed to create Bookbid!");
   }
 
-  revalidatePath("/dashboard/bookbid");
-  redirect("/dashboard/bookbid");
+  revalidatePath("/dashboard/booksetbids");
+  redirect("/dashboard/booksetbids");
 };
 
-// Update Bookbid
-export const updateBookbid = async (formData) => {
-  const { id, title, desc, desc2, desc3, desc4, year} = Object.fromEntries(formData);
+// Update Booksetbid
+export const updateBooksetbid = async (formData) => {
+  const { id, title, desc, desc2, desc3, desc4, desc5, desc6, year} = Object.fromEntries(formData);
 
   try {
     connectToDB();
@@ -576,6 +578,8 @@ export const updateBookbid = async (formData) => {
       desc2,
       desc3,
       desc4,
+      desc5,
+      desc6,
       year,
     };
 
@@ -584,27 +588,27 @@ export const updateBookbid = async (formData) => {
         (updateFields[key] === "" || undefined) && delete updateFields[key]
     );
 
-    await Bookbid.findByIdAndUpdate(id, updateFields);
+    await Booksetbid.findByIdAndUpdate(id, updateFields);
   } catch (err) {
     console.log(err);
     throw new Error("Failed to update Bookbid!");
   }
 
-  revalidatePath("/dashboard/bookbid");
-  redirect("/dashboard/bookbid");
+  revalidatePath("/dashboard/booksetbids");
+  redirect("/dashboard/booksetbids");
 };
 
-// Delete Bookbid
-export const deleteBookbid = async (formData) => {
+// Delete Booksetbid
+export const deleteBooksetbid = async (formData) => {
   const { id } = Object.fromEntries(formData);
 
   try {
     connectToDB();
-    await Bookbid.findByIdAndDelete(id);
+    await Booksetbid.findByIdAndDelete(id);
   } catch (err) {
     console.log(err);
-    throw new Error("Failed to delete Bookbid!");
+    throw new Error("Failed to delete Booksetbid!");
   }
 
-  revalidatePath("/dashboard/bookbid");
+  revalidatePath("/dashboard/booksetbids");
 };
