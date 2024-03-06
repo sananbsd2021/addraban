@@ -56,7 +56,7 @@ const menuItems = [
       },
       {
         title: "ที่คำสั่ง",
-        path: "/dashboard/bookbid",
+        path: "/dashboard/booksetbids",
         icon: <MdAttachMoney />,
       },
     ],
