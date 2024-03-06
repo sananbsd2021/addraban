@@ -1,4 +1,4 @@
-import { Product, Product2, User, Saraban, Booksend, Bookaccept, Bookbid } from "./models";
+import { Product, Product2, User, Saraban, Booksend, Bookaccept, Booksetbid } from "./models";
 import { connectToDB } from "./utils";
 
 export const fetchUsers = async (q, page) => {
@@ -210,8 +210,8 @@ export const fetchBookaccept = async (id) => {
   }
 };
 
-// Fetch Bookbid
-export const fetchBookbids = async (q, page) => {
+// Fetch Booksetbid
+export const fetchBooksetbids = async (q, page) => {
   console.log(q);
   const regex = new RegExp(q, "i");
 
@@ -219,24 +219,24 @@ export const fetchBookbids = async (q, page) => {
 
   try {
     connectToDB();
-    const count = await Bookbid.find({ title: { $regex: regex } }).count();
-    const bookbids = await Bookbid.find({ title: { $regex: regex } })
+    const count = await Booksetbid.find({ title: { $regex: regex } }).count();
+    const booksetbids = await Booksetbid.find({ title: { $regex: regex } })
       .limit(ITEM_PER_PAGE)
       .skip(ITEM_PER_PAGE * (page - 1));
-    return { count, bookbids };
+    return { count, booksetbids };
   } catch (err) {
     console.log(err);
-    throw new Error("Failed to fetch bookbid!");
+    throw new Error("Failed to fetch booksetbid!");
   }
 };
 
-export const fetchBookbid = async (id) => {
+export const fetchBooksetbid = async (id) => {
   try {
     connectToDB();
-    const bookbid = await Bookbid.findById(id);
-    return bookbid;
+    const booksetbid = await Booksetbid.findById(id);
+    return booksetbid;
   } catch (err) {
     console.log(err);
-    throw new Error("Failed to fetch bookbid!");
+    throw new Error("Failed to fetch booksetbid!");
   }
 };
