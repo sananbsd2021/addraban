@@ -387,7 +387,7 @@ export const deleteSaraban = async (formData) => {
 
 // Add Booksend
 export const addBooksend = async (formData) => {
-  const { title, desc, desc2, desc3, desc4, year } =
+  const { title, desc, desc2, desc3, desc4, desc5, desc6, year } =
     Object.fromEntries(formData);
 
   try {
@@ -399,6 +399,8 @@ export const addBooksend = async (formData) => {
       desc2,
       desc3,
       desc4,
+      desc5,
+      desc6,
       year,
     });
 
@@ -414,7 +416,7 @@ export const addBooksend = async (formData) => {
 
 // Update Saraban
 export const updateBooksend = async (formData) => {
-  const { id, title, desc, desc2, desc3, desc4, year } =
+  const { id, title, desc, desc2, desc3, desc4, desc5, desc6, year } =
     Object.fromEntries(formData);
 
   try {
@@ -426,6 +428,8 @@ export const updateBooksend = async (formData) => {
       desc2,
       desc3,
       desc4,
+      desc5,
+      desc6,
       year,
     };
 
@@ -461,7 +465,7 @@ export const deleteBooksend = async (formData) => {
 
 // Add Bookaccept
 export const addBookaccept = async (formData) => {
-  const { title, desc, desc2, desc3, desc4, year } = Object.fromEntries(formData);
+  const { title, desc, desc2, desc3, desc4, desc5,desc6, year } = Object.fromEntries(formData);
 
   try {
     connectToDB();
@@ -472,6 +476,8 @@ export const addBookaccept = async (formData) => {
       desc2,
       desc3,
       desc4,
+      desc5,
+      desc6,
       year,
     });
 
