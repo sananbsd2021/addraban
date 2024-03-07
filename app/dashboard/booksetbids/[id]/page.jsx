@@ -13,7 +13,7 @@ const SingleBooksetbidPage = async ({ params }) => {
         <div className={styles.imgContainer}>
           <Image src="/noavatar.png" alt="" fill />
         </div>
-        {bookaccept.title}
+        {booksetbid.title}
       </div>
       <div className={styles.formContainer}>
         <form action={updateBookaccept} className={styles.form}>
