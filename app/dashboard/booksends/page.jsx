@@ -13,7 +13,7 @@ const BookSendsPage = async ({ searchParams }) => {
   return (
     <div className={styles.container}>
       <div className={styles.top}>
-        <Search placeholder="Search for a product..." />
+        <Search placeholder="Search for a Booksend..." />
         <Link href="/dashboard/booksends/add">
           <button className={styles.addButton}>Add New</button>
         </Link>
@@ -21,13 +21,12 @@ const BookSendsPage = async ({ searchParams }) => {
       <table className={styles.table}>
         <thead>
           <tr>
-            <td>เลขทะเบียน</td>
-            <td>รายละเอียด</td>
-            <td>หน่วยงาน</td>
-            <td>ผู้รับ</td>
-            <td>ผู้จ่าย</td>
-            <td>ปี พ.ศ.</td>
-            <td>Created At</td>
+            <td>เลขส่ง</td>
+            <td>ลงวันที่</td>
+            <td>จาก</td>
+            <td>ถึง</td>
+            <td>เรื่อง</td>
+            <td>หมายเหตุ</td>
             <td>Action</td>
           </tr>
         </thead>
@@ -39,12 +38,10 @@ const BookSendsPage = async ({ searchParams }) => {
                   {booksend.title}
                 </div>
               </td>
-              <td>{booksend.desc}</td>
               <td>{booksend.desc2}</td>
               <td>{booksend.desc3}</td>
               <td>{booksend.desc4}</td>
-              <td>{booksend.year}</td>
-              <td>{booksend.createdAt?.toString().slice(4, 16)}</td>
+              <td>{booksend.desc10}</td>
               <td>
                 <div className={styles.buttons}>
                   <Link href={`/dashboard/booksends/${booksend.id}`}>
