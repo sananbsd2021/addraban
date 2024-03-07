@@ -41,7 +41,7 @@ const BookSendsPage = async ({ searchParams }) => {
               <td>{booksend.desc2}</td>
               <td>{booksend.desc3}</td>
               <td>{booksend.desc4}</td>
-              <td>{booksend.desc10}</td>
+              <td>{booksend.desc5}</td>
               <td>
                 <div className={styles.buttons}>
                   <Link href={`/dashboard/booksends/${booksend.id}`}>
