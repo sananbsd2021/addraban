@@ -10,7 +10,7 @@ const AddBooksendPage = () => {
         <input type="desc3" placeholder="จาก" name="desc3" />
         <input type="desc4" placeholder="ถึง" name="desc4" />
         <input type="desc5" placeholder="เรื่อง" name="desc5" />
-        <input type="desc10" placeholder="หมายเหตุ" name="desc10" />
+        <input type="desc6" placeholder="หมายเหตุ" name="desc6" />
         <button type="submit">Submit</button>
       </form>
     </div>
