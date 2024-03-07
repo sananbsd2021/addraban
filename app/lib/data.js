@@ -125,8 +125,8 @@ export const fetchSarabans = async (q, page) => {
 
   try {
     connectToDB();
-    const count = await Saraban.find({ title: { $regex: regex } }).count();
-    const sarabans = await Saraban.find({ title: { $regex: regex } })
+    const count = await Saraban.find({ desc: { $regex: regex } }).count();
+    const sarabans = await Saraban.find({ desc: { $regex: regex } })
       .limit(ITEM_PER_PAGE)
       .skip(ITEM_PER_PAGE * (page - 1));
     return { count, sarabans };
@@ -156,8 +156,8 @@ export const fetchBooksends = async (q, page) => {
 
   try {
     connectToDB();
-    const count = await Booksend.find({ title: { $regex: regex } }).count();
-    const booksends = await Booksend.find({ title: { $regex: regex } })
+    const count = await Booksend.find({ desc: { $regex: regex } }).count();
+    const booksends = await Booksend.find({ desc: { $regex: regex } })
       .limit(ITEM_PER_PAGE)
       .skip(ITEM_PER_PAGE * (page - 1));
     return { count, booksends };
@@ -188,8 +188,8 @@ export const fetchBookaccepts = async (q, page) => {
 
   try {
     connectToDB();
-    const count = await Bookaccept.find({ title: { $regex: regex } }).count();
-    const bookaccepts = await Bookaccept.find({ title: { $regex: regex } })
+    const count = await Bookaccept.find({ desc: { $regex: regex } }).count();
+    const bookaccepts = await Bookaccept.find({ desc: { $regex: regex } })
       .limit(ITEM_PER_PAGE)
       .skip(ITEM_PER_PAGE * (page - 1));
     return { count, bookaccepts };
@@ -219,8 +219,8 @@ export const fetchBooksetbids = async (q, page) => {
 
   try {
     connectToDB();
-    const count = await Booksetbid.find({ title: { $regex: regex } }).count();
-    const booksetbids = await Booksetbid.find({ title: { $regex: regex } })
+    const count = await Booksetbid.find({ desc: { $regex: regex } }).count();
+    const booksetbids = await Booksetbid.find({ desc: { $regex: regex } })
       .limit(ITEM_PER_PAGE)
       .skip(ITEM_PER_PAGE * (page - 1));
     return { count, booksetbids };
