@@ -16,7 +16,7 @@ const SingleBooksetbidPage = async ({ params }) => {
         {booksetbid.title}
       </div>
       <div className={styles.formContainer}>
-        <form action={updateBookaccept} className={styles.form}>
+        <form action={updateBooksetbid} className={styles.form}>
           <input type="hidden" name="id" value={booksetbid.id} />
           <label>ที่คำสั่ง</label>
           <input type="text" name="title" placeholder={booksetbid.title} />
