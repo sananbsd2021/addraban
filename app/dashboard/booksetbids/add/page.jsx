@@ -15,7 +15,8 @@ const AddBookacceptPage = () => {
           rows="5"
           placeholder="เรื่อง"
         ></textarea>
-        <input type="desc3" placeholder="ลงวันที่" name="desc3" />
+        <input type="desc2" placeholder="ลงวันที่" name="desc2" />
+        <input type="desc3" placeholder="หน่วยงาน" name="desc3" />
         {/* <input type="desc6" placeholder="หมายเหตุ" name="desc6" /> */}
         <button type="submit">Submit</button>
       </form>
