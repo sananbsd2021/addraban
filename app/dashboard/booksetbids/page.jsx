@@ -22,12 +22,8 @@ const BookAcceptPage = async ({ searchParams }) => {
           <tr>
             <td>ที่คำสั่ง</td>
             <td>เรื่อง</td>
-            {/* <td>ลงวันที่</td> */}
             <td>ลงวันที่</td>
             <td>หน่วยงาน</td>
-            {/* <td>ถึง</td>
-            <td>เรื่อง</td>
-            <td>หมายเหตุ</td> */}
           </tr>
         </thead>
         <tbody>
@@ -39,11 +35,8 @@ const BookAcceptPage = async ({ searchParams }) => {
                 </div>
               </td>
               <td>{booksetbid.desc}</td>
-              <td>{bookaccept.desc2}</td>
+              <td>{booksetbid.desc2}</td>
               <td>{booksetbid.desc3}</td>
-              {/* <td>{bookaccept.desc4}</td>
-              <td>{bookaccept.desc5}</td>
-              <td>{bookaccept.desc6}</td> */}
             </tr>
           ))}
         </tbody>
