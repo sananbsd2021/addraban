@@ -4,7 +4,7 @@ import Search from "@/app/ui/dashboard/search/search";
 import Pagination from "@/app/ui/dashboard/pagination/pagination";
 import { fetchBooksetbids } from "@/app/lib/data";
 
-const BookAcceptPage = async ({ searchParams }) => {
+const BooksetbidsPage = async ({ searchParams }) => {
   const q = searchParams?.q || "";
   const page = searchParams?.page || 1;
   const { count, booksetbids } = await fetchBooksetbids(q, page);
@@ -46,4 +46,4 @@ const BookAcceptPage = async ({ searchParams }) => {
   );
 };
 
-export default BookAcceptPage;
+export default BooksetbidsPage;
