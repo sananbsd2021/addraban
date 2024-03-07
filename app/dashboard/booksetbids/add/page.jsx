@@ -1,7 +1,7 @@
 import { addBooksetbid } from "@/app/lib/actions";
 import styles from "@/app/ui/dashboard/products/addProduct/addProduct.module.css";
 
-const AddBookacceptPage = () => {
+const AddBooksetbidPage = () => {
   return (
     <div className={styles.container}>
       <form action={addBooksetbid} className={styles.form}>
@@ -20,4 +20,4 @@ const AddBookacceptPage = () => {
   );
 };
 
-export default AddBookacceptPage;
+export default AddBooksetbidPage;
