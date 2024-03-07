@@ -27,7 +27,7 @@ const SingleBookacceptPage = async ({ params }) => {
           <label>จาก</label>
           <input type="text" name="desc4" placeholder={bookaccept.desc4} />
           <label>ถึง</label>
-          <input type="text" name="year" placeholder={bookaccept.year} />
+          <input type="text" name="desc5" placeholder={bookaccept.desc5} />
           <label>เรื่อง</label>
           <textarea
             name="desc"
