@@ -18,7 +18,7 @@ const SingleBookacceptPage = async ({ params }) => {
       <div className={styles.formContainer}>
         <form action={updateBookaccept} className={styles.form}>
           <input type="hidden" name="id" value={bookaccept.id} />
-          <label>ที่รับ</label>
+          <label>เลขรับ</label>
           <input type="text" name="title" placeholder={bookaccept.title} />
           <label>ที่หนังสือ</label>
           <input type="text" name="desc2" placeholder={bookaccept.desc2} />
