@@ -18,16 +18,8 @@ const SingleBookacceptPage = async ({ params }) => {
       <div className={styles.formContainer}>
         <form action={updateBookaccept} className={styles.form}>
           <input type="hidden" name="id" value={bookaccept.id} />
-          <label>เลขรับ</label>
+          <label>ที่คำสั่ง</label>
           <input type="text" name="title" placeholder={bookaccept.title} />
-          <label>ที่หนังสือ</label>
-          <input type="text" name="desc2" placeholder={bookaccept.desc2} />
-          <label>ลงวันที่</label>
-          <input type="text" name="desc3" placeholder={bookaccept.desc3} />
-          <label>จาก</label>
-          <input type="text" name="desc4" placeholder={bookaccept.desc4} />
-          <label>ถึง</label>
-          <input type="text" name="desc5" placeholder={bookaccept.desc5} />
           <label>เรื่อง</label>
           <textarea
             name="desc"
@@ -35,8 +27,11 @@ const SingleBookacceptPage = async ({ params }) => {
             rows="10"
             placeholder={bookaccept.desc}
           ></textarea>
-          <label>หมายเหตุ</label>
-          <input type="text" name="descุ" placeholder={bookaccept.descุ} />
+          <label>ลงวันที่</label>
+          <input type="text" name="desc2" placeholder={bookaccept.desc2} />
+          <label>หน่วยงาน</label>
+          <input type="text" name="desc3" placeholder={bookaccept.desc3} />
+
           <button>Update</button>
         </form>
       </div>
