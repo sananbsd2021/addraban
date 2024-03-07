@@ -13,7 +13,7 @@ const BookSendsPage = async ({ searchParams }) => {
   return (
     <div className={styles.container}>
       <div className={styles.top}>
-        <Search placeholder="Search for a product..." />
+        <Search placeholder="Search for a Bookaccept..." />
         <Link href="/dashboard/bookaccept/add">
           <button className={styles.addButton}>Add New</button>
         </Link>
@@ -21,13 +21,12 @@ const BookSendsPage = async ({ searchParams }) => {
       <table className={styles.table}>
         <thead>
           <tr>
-            <td>เลขทะเบียน</td>
-            <td>รายละเอียด</td>
-            <td>หน่วยงาน</td>
-            <td>ผู้รับ</td>
-            <td>ผู้จ่าย</td>
-            <td>ปี พ.ศ.</td>
-            <td>Created At</td>
+            <td>เลขรับ</td>
+            <td>ที่หนังสือ</td>
+            <td>ลงวันที่</td>
+            <td>จาก</td>
+            <td>ถึง</td>
+            <td>เรื่อง</td>
             <td>Action</td>
           </tr>
         </thead>
@@ -39,12 +38,11 @@ const BookSendsPage = async ({ searchParams }) => {
                   {bookaccept.title}
                 </div>
               </td>
-              <td>{bookaccept.desc}</td>
               <td>{bookaccept.desc2}</td>
               <td>{bookaccept.desc3}</td>
               <td>{bookaccept.desc4}</td>
-              <td>{bookaccept.year}</td>
-              <td>{bookaccept.createdAt?.toString().slice(4, 16)}</td>
+              <td>{bookaccept.desc5}</td>
+              <td>{bookaccept.desc}</td>
               <td>
                 <div className={styles.buttons}>
                   <Link href={`/dashboard/bookaccept/${bookaccept.id}`}>
