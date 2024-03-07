@@ -24,6 +24,7 @@ const BooksetbidsPage = async ({ searchParams }) => {
             <td>เรื่อง</td>
             <td>ลงวันที่</td>
             <td>หน่วยงาน</td>
+            <td>Action</td>
           </tr>
         </thead>
         <tbody>
@@ -37,6 +38,22 @@ const BooksetbidsPage = async ({ searchParams }) => {
               <td>{booksetbid.desc}</td>
               <td>{booksetbid.desc2}</td>
               <td>{booksetbid.desc3}</td>
+              <td>
+                <div className={styles.buttons}>
+                  <Link href={`/dashboard/sarabans/${saraban.id}`}>
+                    <button className={`${styles.button} ${styles.view}`}>
+                      View
+                    </button>
+                  </Link>
+                  <form action={deleteSaraban}>
+                    <input type="hidden" name="id" value={saraban.id} />
+                    <button className={`${styles.button} ${styles.delete}`}>
+                      Delete
+                    </button>
+                  </form>
+                </div>
+              </td>
+              
             </tr>
           ))}
         </tbody>
