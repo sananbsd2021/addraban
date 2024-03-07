@@ -20,10 +20,11 @@ const BookAcceptPage = async ({ searchParams }) => {
       <table className={styles.table}>
         <thead>
           <tr>
-            <td>เลขรับ</td>
-            <td>ที่หนังสือ</td>
+            <td>ที่คำสั่ง</td>
+            <td>เรื่อง</td>
             {/* <td>ลงวันที่</td> */}
-            <td>จาก</td>
+            <td>ลงวันที่</td>
+            <td>หน่วยงาน</td>
             {/* <td>ถึง</td>
             <td>เรื่อง</td>
             <td>หมายเหตุ</td> */}
@@ -38,7 +39,7 @@ const BookAcceptPage = async ({ searchParams }) => {
                 </div>
               </td>
               <td>{booksetbid.desc}</td>
-              {/* <td>{bookaccept.desc2}</td> */}
+              <td>{bookaccept.desc2}</td>
               <td>{booksetbid.desc3}</td>
               {/* <td>{bookaccept.desc4}</td>
               <td>{bookaccept.desc5}</td>
