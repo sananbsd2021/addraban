@@ -35,6 +35,8 @@ const SingleBookacceptPage = async ({ params }) => {
             rows="10"
             placeholder={bookaccept.desc}
           ></textarea>
+          <label>หมายเหตุ</label>
+          <input type="text" name="desc6" placeholder={bookaccept.desc6} />
           <button>Update</button>
         </form>
       </div>
