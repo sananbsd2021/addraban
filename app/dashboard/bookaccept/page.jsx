@@ -5,7 +5,7 @@ import Pagination from "@/app/ui/dashboard/pagination/pagination";
 import { fetchBookaccepts } from "@/app/lib/data";
 import { deleteBookaccept } from "@/app/lib/actions";
 
-const BookSendsPage = async ({ searchParams }) => {
+const BookAcceptPage = async ({ searchParams }) => {
   const q = searchParams?.q || "";
   const page = searchParams?.page || 1;
   const { count, bookaccepts } = await fetchBookaccepts(q, page);
@@ -13,7 +13,7 @@ const BookSendsPage = async ({ searchParams }) => {
   return (
     <div className={styles.container}>
       <div className={styles.top}>
-        <Search placeholder="Search for a Bookaccept..." />
+        <Search placeholder="Search for a product..." />
         <Link href="/dashboard/bookaccept/add">
           <button className={styles.addButton}>Add New</button>
         </Link>
@@ -27,6 +27,7 @@ const BookSendsPage = async ({ searchParams }) => {
             <td>จาก</td>
             <td>ถึง</td>
             <td>เรื่อง</td>
+            <td>การปฎิบัติ</td>
             <td>Action</td>
           </tr>
         </thead>
@@ -43,6 +44,7 @@ const BookSendsPage = async ({ searchParams }) => {
               <td>{bookaccept.desc4}</td>
               <td>{bookaccept.desc5}</td>
               <td>{bookaccept.desc}</td>
+              <td>{bookaccept.desc6}</td>
               <td>
                 <div className={styles.buttons}>
                   <Link href={`/dashboard/bookaccept/${bookaccept.id}`}>
@@ -67,4 +69,4 @@ const BookSendsPage = async ({ searchParams }) => {
   );
 };
 
-export default BookSendsPage;
+export default BookAcceptPage;
