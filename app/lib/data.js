@@ -1,4 +1,4 @@
-import { Product, Product2, User, Saraban, Booksend, Bookaccept, Booksetbid } from "./models";
+import { Product, Product2, User, Saraban, Booksend, Bookaccept, Booksetbid, Palad } from "./models";
 import { connectToDB } from "./utils";
 
 export const fetchUsers = async (q, page) => {
@@ -115,6 +115,37 @@ export const fetchProduct2 = async (id) => {
   }
 };
 
+
+// Fetch Palad
+export const fetchPalads = async (q, page) => {
+  console.log(q);
+  const regex = new RegExp(q, "i");
+
+  const ITEM_PER_PAGE = 5;
+
+  try {
+    connectToDB();
+    const count = await Palad.find({ desc: { $regex: regex } }).count();
+    const palads = await Palad.find({ desc: { $regex: regex } })
+      .limit(ITEM_PER_PAGE)
+      .skip(ITEM_PER_PAGE * (page - 1));
+    return { count, palads };
+  } catch (err) {
+    console.log(err);
+    throw new Error("Failed to fetch Palads!");
+  }
+};
+
+export const fetchPalad = async (id) => {
+  try {
+    connectToDB();
+    const palad = await Palad.findById(id);
+    return palad;
+  } catch (err) {
+    console.log(err);
+    throw new Error("Failed to fetch Palad!");
+  }
+};
 
 // Fetch Saraban
 export const fetchSarabans = async (q, page) => {
