@@ -9,8 +9,8 @@ const AddBooksendPage = () => {
         <input type="desc2" placeholder="ลงวันที่" name="desc2" />
         <input type="desc3" placeholder="จาก" name="desc3" />
         <input type="desc4" placeholder="ถึง" name="desc4" />
-        <input type="desc5" placeholder="เรื่อง" name="desc5" />
-        <input type="desc6" placeholder="หมายเหตุ" name="desc6" />
+        <input type="desc" placeholder="เรื่อง" name="desc" />
+        <input type="desc5" placeholder="หมายเหตุ" name="desc5" />
         <button type="submit">Submit</button>
       </form>
     </div>
