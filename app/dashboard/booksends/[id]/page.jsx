@@ -33,8 +33,8 @@ const SingleBooksendPage = async ({ params }) => {
             rows="10"
             placeholder={booksend.desc}
           ></textarea>
-          <label>ปี พ.ศ.</label>
-          <input type="text" name="year" placeholder={booksend.year} />
+          <label>การปฎิบัติ</label>
+          <input type="text" name="desc6" placeholder={booksend.desc6} />
           <button>Update</button>
         </form>
       </div>
