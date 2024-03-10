@@ -112,18 +112,14 @@ const product2Schema = new mongoose.Schema(
 const paladSchema = new mongoose.Schema(
   {
     number: {
-      type: Number,
+      type: String,
       required: true,
-      min: 0,
     },
     title: {
       type: String,
-      required: true,
-      unique: true,
     },
     desc: {
       type: String,
-      required: true,
     },
   },
   { timestamps: true }
