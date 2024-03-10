@@ -387,7 +387,7 @@ export const deleteSaraban = async (formData) => {
 
 // Add Booksend
 export const addBooksend = async (formData) => {
-  const { title, desc, desc2, desc3, desc4, desc5, desc6, year } =
+  const { title, desc, desc2, desc3, desc4, desc5, desc6 } =
     Object.fromEntries(formData);
 
   try {
@@ -401,7 +401,6 @@ export const addBooksend = async (formData) => {
       desc4,
       desc5,
       desc6,
-      year,
     });
 
     await newBooksend.save();
@@ -414,9 +413,9 @@ export const addBooksend = async (formData) => {
   redirect("/dashboard/booksends");
 };
 
-// Update Saraban
+// Update Booksend
 export const updateBooksend = async (formData) => {
-  const { id, title, desc, desc2, desc3, desc4, desc5, desc6, year } =
+  const { id, title, desc, desc2, desc3, desc4, desc5, desc6 } =
     Object.fromEntries(formData);
 
   try {
@@ -430,7 +429,6 @@ export const updateBooksend = async (formData) => {
       desc4,
       desc5,
       desc6,
-      year,
     };
 
     Object.keys(updateFields).forEach(
@@ -448,7 +446,7 @@ export const updateBooksend = async (formData) => {
   redirect("/dashboard/booksends");
 };
 
-// Delete Saraban
+// Delete Booksend
 export const deleteBooksend = async (formData) => {
   const { id } = Object.fromEntries(formData);
 
@@ -462,6 +460,7 @@ export const deleteBooksend = async (formData) => {
 
   revalidatePath("/dashboard/booksends");
 };
+
 
 // Add Bookaccept
 export const addBookaccept = async (formData) => {
