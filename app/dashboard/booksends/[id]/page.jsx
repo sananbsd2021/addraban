@@ -28,7 +28,7 @@ const SingleBooksendPage = async ({ params }) => {
           <input type="text" name="desc4" placeholder={booksend.desc4} />
            <label>ถึง</label>
           <input type="text" name="desc5" placeholder={booksend.desc5} />
-          <label>รายลเอียด</label>
+          <label>เรื่อง</label>
           <textarea
             name="desc"
             id="desc"
