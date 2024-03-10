@@ -18,14 +18,16 @@ const SingleBooksendPage = async ({ params }) => {
       <div className={styles.formContainer}>
         <form action={updateBooksend} className={styles.form}>
           <input type="hidden" name="id" value={booksend.id} />
-          <label>เลขทะเบียน</label>
+          <label>เลขส่ง</label>
           <input type="text" name="title" placeholder={booksend.title} />
-          <label>ผู้รับ</label>
+          <label>ที่หนังสือ</label>
           <input type="text" name="desc2" placeholder={booksend.desc2} />
-          <label>หน่วยงาน</label>
+          <label>ลงวันที่</label>
           <input type="text" name="desc3" placeholder={booksend.desc3} />
-          <label>ผู้จ่าย</label>
+          <label>จาก</label>
           <input type="text" name="desc4" placeholder={booksend.desc4} />
+           <label>ถึง</label>
+          <input type="text" name="desc5" placeholder={booksend.desc5} />
           <label>รายลเอียด</label>
           <textarea
             name="desc"
