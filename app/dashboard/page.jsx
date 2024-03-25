@@ -1,4 +1,4 @@
-import BookAcceptPage from "../ui/dashboard/bookaccepts/bookaccept";
+{/* import BookAcceptPage from "../ui/dashboard/bookaccepts/bookaccept"; */}
 import BookSendsPage from "../ui/dashboard/booksends/booksends";
 import Search from "@/app/ui/dashboard/search/search";
 import Card from "../ui/dashboard/card/card";
@@ -17,7 +17,7 @@ const Dashboard = () => {
           <Card />
         </div> */}
         <BookSendsPage />
-        <BookAcceptPage />
+{/*         <BookAcceptPage /> */}
 {/*        <Transactions />  */}
         <Chart />
       </div>
