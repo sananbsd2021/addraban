@@ -1,11 +1,10 @@
 {/* import BookAcceptPage from "../ui/dashboard/bookaccepts/bookaccept"; */}
-import BookSendsPage from "../ui/dashboard/booksends/booksends";
-import Search from "@/app/ui/dashboard/search/search";
-import Card from "../ui/dashboard/card/card";
-import Chart from "../ui/dashboard/chart/chart";
-import styles from "../ui/dashboard/dashboard.module.css";
-import Rightbar from "../ui/dashboard/rightbar/rightbar";
-import Transactions from "../ui/dashboard/transactions/transactions";
+import BookSendsPage from "@/app/ui/dashboard/booksends/booksends";
+import Card from "@/app/ui/dashboard/card/card";
+import Chart from "@/app/ui/dashboard/chart/chart";
+import styles from "@/app/ui/dashboard/dashboard.module.css";
+import Rightbar from "@/app/ui/dashboard/rightbar/rightbar";
+import Transactions from "@/app/ui/dashboard/transactions/transactions";
 
 const Dashboard = () => {
   return (
