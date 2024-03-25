@@ -152,7 +152,7 @@ export const fetchSarabans = async (q, page) => {
   console.log(q);
   const regex = new RegExp(q, "i");
 
-  const ITEM_PER_PAGE = 5;
+  const ITEM_PER_PAGE = 10;
 
   try {
     connectToDB();
@@ -183,7 +183,7 @@ export const fetchBooksends = async (q, page) => {
   console.log(q);
   const regex = new RegExp(q, "i");
 
-  const ITEM_PER_PAGE = 5;
+  const ITEM_PER_PAGE = 10;
 
   try {
     connectToDB();
@@ -215,7 +215,7 @@ export const fetchBookaccepts = async (q, page) => {
   console.log(q);
   const regex = new RegExp(q, "i");
 
-  const ITEM_PER_PAGE = 5;
+  const ITEM_PER_PAGE = 10;
 
   try {
     connectToDB();
@@ -246,7 +246,7 @@ export const fetchBooksetbids = async (q, page) => {
   console.log(q);
   const regex = new RegExp(q, "i");
 
-  const ITEM_PER_PAGE = 5;
+  const ITEM_PER_PAGE = 10;
 
   try {
     connectToDB();
