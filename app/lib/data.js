@@ -1,4 +1,12 @@
-import { Product, Product2, User, Saraban, Booksend, Bookaccept, Booksetbid, Palad } from "./models";
+import {
+  Product,
+  User,
+  Saraban,
+  Booksend,
+  Bookaccept,
+  Booksetbid,
+  Palad,
+} from "./models";
 import { connectToDB } from "./utils";
 
 export const fetchUsers = async (q, page) => {
@@ -84,69 +92,6 @@ export const cards = [
   },
 ];
 
-
-export const fetchProducts2 = async (q, page) => {
-  console.log(q);
-  const regex = new RegExp(q, "i");
-
-  const ITEM_PER_PAGE = 10;
-
-  try {
-    connectToDB();
-    const count = await Product2.find({ title: { $regex: regex } }).count();
-    const products2 = await Product2.find({ title: { $regex: regex } })
-      .limit(ITEM_PER_PAGE)
-      .skip(ITEM_PER_PAGE * (page - 1));
-    return { count, products2 };
-  } catch (err) {
-    console.log(err);
-    throw new Error("Failed to fetch products2!");
-  }
-};
-
-export const fetchProduct2 = async (id) => {
-  try {
-    connectToDB();
-    const product2 = await Product2.findById(id);
-    return product2;
-  } catch (err) {
-    console.log(err);
-    throw new Error("Failed to fetch product2!");
-  }
-};
-
-
-// Fetch Palad
-export const fetchPalads = async (q, page) => {
-  console.log(q);
-  const regex = new RegExp(q, "i");
-
-  const ITEM_PER_PAGE = 5;
-
-  try {
-    connectToDB();
-    const count = await Palad.find({ desc: { $regex: regex } }).count();
-    const palads = await Palad.find({ desc: { $regex: regex } })
-      .limit(ITEM_PER_PAGE)
-      .skip(ITEM_PER_PAGE * (page - 1));
-    return { count, palads };
-  } catch (err) {
-    console.log(err);
-    throw new Error("Failed to fetch Palads!");
-  }
-};
-
-export const fetchPalad = async (id) => {
-  try {
-    connectToDB();
-    const palad = await Palad.findById(id);
-    return palad;
-  } catch (err) {
-    console.log(err);
-    throw new Error("Failed to fetch Palad!");
-  }
-};
-
 // Fetch Saraban
 export const fetchSarabans = async (q, page) => {
   console.log(q);
@@ -156,8 +101,8 @@ export const fetchSarabans = async (q, page) => {
 
   try {
     connectToDB();
-    const count = await Saraban.find({ desc: { $regex: regex } }).count();
-    const sarabans = await Saraban.find({ desc: { $regex: regex } })
+    const count = await Saraban.find({ title: { $regex: regex } }).count();
+    const sarabans = await Saraban.find({ title: { $regex: regex } })
       .limit(ITEM_PER_PAGE)
       .skip(ITEM_PER_PAGE * (page - 1));
     return { count, sarabans };
@@ -209,7 +154,6 @@ export const fetchBooksend = async (id) => {
   }
 };
 
-
 // Fetch Bookaccept
 export const fetchBookaccepts = async (q, page) => {
   console.log(q);
@@ -219,8 +163,8 @@ export const fetchBookaccepts = async (q, page) => {
 
   try {
     connectToDB();
-    const count = await Bookaccept.find({ desc: { $regex: regex } }).count();
-    const bookaccepts = await Bookaccept.find({ desc: { $regex: regex } })
+    const count = await Bookaccept.find({ title: { $regex: regex } }).count();
+    const bookaccepts = await Bookaccept.find({ title: { $regex: regex } })
       .limit(ITEM_PER_PAGE)
       .skip(ITEM_PER_PAGE * (page - 1));
     return { count, bookaccepts };
@@ -240,6 +184,7 @@ export const fetchBookaccept = async (id) => {
     throw new Error("Failed to fetch bookaccept!");
   }
 };
+
 
 // Fetch Booksetbid
 export const fetchBooksetbids = async (q, page) => {
@@ -269,5 +214,36 @@ export const fetchBooksetbid = async (id) => {
   } catch (err) {
     console.log(err);
     throw new Error("Failed to fetch booksetbid!");
+  }
+};
+
+// Fetch Palad
+export const fetchPalads = async (q, page) => {
+  console.log(q);
+  const regex = new RegExp(q, "i");
+
+  const ITEM_PER_PAGE = 5;
+
+  try {
+    connectToDB();
+    const count = await Palad.find({ desc: { $regex: regex } }).count();
+    const Palads = await Palad.find({ desc: { $regex: regex } })
+      .limit(ITEM_PER_PAGE)
+      .skip(ITEM_PER_PAGE * (page - 1));
+    return { count, palads };
+  } catch (err) {
+    console.log(err);
+    throw new Error("Failed to fetch palad!");
+  }
+};
+
+export const fetchPalad = async (id) => {
+  try {
+    connectToDB();
+    const palad = await Palad.findById(id);
+    return palad;
+  } catch (err) {
+    console.log(err);
+    throw new Error("Failed to fetch palad!");
   }
 };
