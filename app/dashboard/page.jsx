@@ -1,4 +1,4 @@
-{/* import BookAcceptPage from "../ui/dashboard/bookaccepts/bookaccept"; */}
+import BookAcceptPage from "@/app/ui/dashboard/bookaccepts/bookaccept";
 import BookSendsPage from "@/app/ui/dashboard/booksends/booksends";
 import Card from "@/app/ui/dashboard/card/card";
 import Chart from "@/app/ui/dashboard/chart/chart";
@@ -16,7 +16,7 @@ const Dashboard = () => {
           <Card />
         </div> */}
         <BookSendsPage />
-{/*         <BookAcceptPage /> */}
+        <BookAcceptPage />
 {/*        <Transactions />  */}
         <Chart />
       </div>
