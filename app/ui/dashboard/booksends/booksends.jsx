@@ -1,12 +1,12 @@
 import styles from "@/app/ui/dashboard/products/products.module.css";
 import Search from "@/app/ui/dashboard/search/search";
 import Pagination from "@/app/ui/dashboard/pagination/pagination";
-import { fetchBooksends } from "@/app/lib/data";
+import { fetchBooksend } from "@/app/lib/data";
 
 const BookSendsPage = async ({ searchParams }) => {
   const q = searchParams?.q || "";
   const page = searchParams?.page || 1;
-  const { count, booksends } = await fetchBooksends(q, page);
+  const { count, booksends } = await fetchBooksend(q, page);
 
   return (
     <div className={styles.container}>
