@@ -20,7 +20,9 @@ const SingleProductPage = async ({ params }) => {
           <input type="hidden" name="id" value={saraban.id} />
           <label>เลขทะเบียน</label>
           <input type="text" name="title" placeholder={saraban.title} />
-          <label>รายลเอียด</label>
+          <label>ลงวันที่</label>
+          <input type="text" name="desc2" placeholder={saraban.desc2} />
+          <label>เรื่อง</label>
           <textarea
             name="desc"
             id="desc"
@@ -28,10 +30,9 @@ const SingleProductPage = async ({ params }) => {
             placeholder={saraban.desc}
           ></textarea>
           <label>หน่วยงาน</label>
-          <input type="text" name="desc2" placeholder={saraban.desc2} />
-          <label>ปี พ.ศ.</label>
-          <input type="text" name="year" placeholder={saraban.year} />
-
+          <input type="text" name="desc3" placeholder={saraban.desc3} />
+          <label>การปฏิบัติ</label>
+          <input type="text" name="desc4" placeholder={saraban.desc4} />
           <button>Update</button>
         </form>
       </div>
