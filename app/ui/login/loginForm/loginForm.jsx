@@ -12,7 +12,7 @@ const LoginForm = () => {
       <h1>ดัชนีการสืบค้นข้อมูลด้วยระบบคอมพิวเตอร์</h1>
       <input type="text" placeholder="username" name="username" />
       <input type="password" placeholder="password" name="password" />
-      <button>Login</button>
+      <button>เข้าสู่ระบบ</button>
       {state && state}
     </form>
   );
