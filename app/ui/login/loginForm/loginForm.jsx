@@ -9,7 +9,8 @@ const LoginForm = () => {
 
   return (
     <form action={formAction} className={styles.form}>
-      <h1>ดัชนีการสืบค้นข้อมูลด้วยระบบคอมพิวเตอร์</h1>
+      <h1>ดัชนีการสืบค้นข้อมูล</h1>
+      <p>(ระบบสารสนเทศงานสารบรรณอิเล็กทรอนิกส์)</p>
       <input type="text" placeholder="username" name="username" />
       <input type="password" placeholder="password" name="password" />
       <button>เข้าสู่ระบบ</button>
