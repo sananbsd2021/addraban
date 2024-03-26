@@ -22,7 +22,7 @@ const ProductsPage = async ({ searchParams }) => {
         <thead>
           <tr>
             <td>เลขทะเบียน</td>
-            <td>วันที่</td>
+            <td>ลงวันที่</td>
             <td>เรื่อง</td>
             <td>หน่วยงาน</td>
             <td>การปฏิบัติ</td>
