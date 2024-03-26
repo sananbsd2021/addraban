@@ -5,7 +5,7 @@ const AddBooksendPage = () => {
   return (
     <div className={styles.container}>
       <form action={addBooksend} className={styles.form}>
-      <input type="text" placeholder="เลขรับ" name="title" required />
+      <input type="text" placeholder="เลขส่ง" name="title" required />
         <input type="desc2" placeholder="ที่หนังสือ" name="desc2" />
         <input type="desc3" placeholder="ลงวันที่" name="desc3" />
         <input type="desc4" placeholder="จาก" name="desc4" />
