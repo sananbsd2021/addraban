@@ -315,7 +315,7 @@ export const deletePalad = async (formData) => {
 
 // Add Saraban
 export const addSaraban = async (formData) => {
-  const { title, desc, desc2, year } = Object.fromEntries(formData);
+  const { title, desc, desc2, desc3, desc4, year } = Object.fromEntries(formData);
 
   try {
     connectToDB();
@@ -325,8 +325,8 @@ export const addSaraban = async (formData) => {
       desc,
       desc2,
       year,
-      // desc3,
-      // desc4,
+      desc3,
+      desc4,
     });
 
     await newSaraban.save();
