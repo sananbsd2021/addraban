@@ -132,8 +132,8 @@ export const fetchBooksends = async (q, page) => {
 
   try {
     connectToDB();
-    const count = await Booksend.find({ desc: { $regex: regex } }).count();
-    const booksends = await Booksend.find({ desc: { $regex: regex } })
+    const count = await Booksend.find({ desc,title: { $regex: regex } }).count();
+    const booksends = await Booksend.find({ desc,title: { $regex: regex } })
       .limit(ITEM_PER_PAGE)
       .skip(ITEM_PER_PAGE * (page - 1));
     return { count, booksends };
