@@ -134,13 +134,14 @@ const sarabanSchema = new mongoose.Schema(
     },
     desc: {
       type: String,
-      required: true,
     },
     desc2: {
       type: String,
-      required: true,
     },    
-    year: {
+    desc3: {
+      type: String,
+    },   
+    desc4: {
       type: String,
     },    
   },
