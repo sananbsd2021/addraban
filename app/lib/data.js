@@ -196,7 +196,7 @@ export const fetchBooksetbids = async (q, page) => {
   try {
     connectToDB();
     const count = await Booksetbid.find({ desc: { $regex: regex } }).count();
-    const booksetbids = await Booksetbid.find({ desc: { $regex: regex } })
+    const booksetbids = await Booksetbid.find().sort({"_id": -1})
       .limit(ITEM_PER_PAGE)
       .skip(ITEM_PER_PAGE * (page - 1));
     return { count, booksetbids };
