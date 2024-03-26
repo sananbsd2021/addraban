@@ -341,7 +341,7 @@ export const addSaraban = async (formData) => {
 
 // Update Saraban
 export const updateSaraban = async (formData) => {
-  const { id, title, desc, desc2, year } = Object.fromEntries(formData);
+  const { id, title, desc, desc2, desc3, desc4, year } = Object.fromEntries(formData);
 
   try {
     connectToDB();
@@ -351,8 +351,8 @@ export const updateSaraban = async (formData) => {
       desc,
       desc2,
       year,
-      // desc3,
-      // desc4,
+      desc3,
+      desc4,
     };
 
     Object.keys(updateFields).forEach(
