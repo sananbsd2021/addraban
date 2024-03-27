@@ -6,38 +6,38 @@ import { LineChart, Line, XAxis, YAxis, Tooltip, Legend, ResponsiveContainer } f
 const data = [
   {
     name: "Sun",
-    ส่ง: 4000,
-    click: 2400,
+    หนังสือส่ง: 4000,
+    หนังสือรับ: 2400,
   },
   {
     name: "Mon",
-    ส่ง: 3000,
-    click: 1398,
+    หนังสือส่ง: 3000,
+    หนังสือรับ: 1398,
   },
   {
     name: "Tue",
-    ส่ง: 2000,
-    click: 3800,
+    หนังสือส่ง: 2000,
+    หนังสือรับ: 3800,
   },
   {
     name: "Wed",
-    ส่ง: 2780,
-    click: 3908,
+    หนังสือส่ง: 2780,
+    หนังสือรับ: 3908,
   },
   {
     name: "Thu",
-    ส่ง: 1890,
-    click: 4800,
+    หนังสือส่ง: 1890,
+    หนังสือรับ: 4800,
   },
   {
     name: "Fri",
     ส่ง: 2390,
-    click: 3800,
+    หนังสือรับ: 3800,
   },
   {
     name: "Sat",
-    ส่ง: 3490,
-    click: 4300,
+    หนังสือส่ง: 3490,
+    หนังสือรับ: 4300,
   },
 ];
 
@@ -61,8 +61,8 @@ const Chart = () => {
           <YAxis />
           <Tooltip contentStyle={{background:"#151c2c", border:"none"}}/>
           <Legend />
-          <Line type="monotone" dataKey="ส่ง" stroke="#8884d8" strokeDasharray="5 5" />
-          <Line type="monotone" dataKey="click" stroke="#82ca9d" strokeDasharray="3 4 5 2" />
+          <Line type="monotone" dataKey="หนังสือส่ง" stroke="#8884d8" strokeDasharray="5 5" />
+          <Line type="monotone" dataKey="หนังสือรับ" stroke="#82ca9d" strokeDasharray="3 4 5 2" />
         </LineChart>
       </ResponsiveContainer>
     </div>
