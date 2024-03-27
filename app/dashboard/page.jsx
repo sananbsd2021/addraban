@@ -21,7 +21,7 @@ const Dashboard = () => {
         <Chart />
       </div>
       <div className={styles.side}>
-        <Rightbar />
+   {/*     <Rightbar /> */}
       </div>
     </div>
   );
