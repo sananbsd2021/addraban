@@ -1,6 +1,6 @@
 const Homepage = () => {
   return (
-    <div className="text-bold text-3xl flex items-center">SananDev</div>
+    <div className="text-4xl flex items-center justify-between text-center">SananDev</div>
   )
 }
 
