@@ -33,8 +33,8 @@ const BookSendsPage = async ({ searchParams }) => {
                 </div>
               </td>
               <td>{booksend.desc}</td>
-              <td>{booksend.desc2}</td>
               <td>{booksend.desc3}</td>
+              <td>{booksend.desc2}</td>
               <td>{booksend.desc4}</td> 
             </tr>
           ))}
