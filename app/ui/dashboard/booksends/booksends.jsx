@@ -17,9 +17,9 @@ const BookSendsPage = async ({ searchParams }) => {
       <table className={styles.table}>
         <thead>
           <tr>
-            <td>ทะเบียน</td>
-            <td>รายละเอียด</td>
-            <td>หน่วยงาน</td>
+            <td>เลขส่ง</td>
+            <td>เรื่อง</td>
+            <td>ลงวันที่</td>
             <td>ผู้รับ</td>
             <td>ผู้จ่าย</td>
           </tr>
