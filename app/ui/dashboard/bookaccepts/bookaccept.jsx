@@ -17,8 +17,8 @@ const BookAcceptPage = async ({ searchParams }) => {
       <table className={styles.table}>
         <thead>
           <tr>
-            <td>ทะเบียน</td>
-            <td>รายละเอียด</td>
+            <td>เลขส่ง</td>
+            <td>เรื่อง</td>
             <td>จาก</td>
             <td>ถึง</td>
             <td>ผู้จ่าย</td>
