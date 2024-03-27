@@ -20,8 +20,8 @@ const BookSendsPage = async ({ searchParams }) => {
             <td>เลขส่ง</td>
             <td>เรื่อง</td>
             <td>ลงวันที่</td>
-            <td>ผู้รับ</td>
-            <td>ผู้จ่าย</td>
+            <td>จาก</td>
+            <td>ถึง</td>
           </tr>
         </thead>
         <tbody>
@@ -34,8 +34,8 @@ const BookSendsPage = async ({ searchParams }) => {
               </td>
               <td>{booksend.desc}</td>
               <td>{booksend.desc3}</td>
-              <td>{booksend.desc2}</td>
-              <td>{booksend.desc4}</td> 
+              <td>{booksend.desc4}</td>
+              <td>{booksend.desc2}</td> 
             </tr>
           ))}
         </tbody>
