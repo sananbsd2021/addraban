@@ -8,7 +8,7 @@ const LoginForm = () => {
   const [state, formAction] = useFormState(authenticate, undefined);
 
   return (
-    <form action={formAction} className="w-16 md:w-32 lg:w-48">
+    <form action={formAction} className={styles.form}>
       <h1>ดัชนีการสืบค้นข้อมูล</h1>
       <p>(ระบบสารสนเทศงานสารบรรณอิเล็กทรอนิกส์)</p>
       <input type="text" placeholder="username" name="username" />
