@@ -1,5 +1,5 @@
 import styles from "@/app/ui/dashboard/products/products.module.css";
-import Search from "@/app/ui/dashboard/search/search";
+//import Search from "@/app/ui/dashboard/search/search";
 import Pagination from "@/app/ui/dashboard/pagination/pagination";
 import { fetchBookaccepts } from "@/app/lib/data";
 
@@ -11,7 +11,7 @@ const BookAcceptPage = async ({ searchParams }) => {
   return (
     <div className={styles.container}>
       <div className={styles.top}>
-        <Search placeholder="Search for a bookaccept..." />
+        {/*   <Search placeholder="Search for a bookaccept..." /> */}
         <div>หนังสือรับ</div>
       </div>      
       <table className={styles.table}>
