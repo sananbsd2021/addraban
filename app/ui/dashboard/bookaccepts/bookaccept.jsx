@@ -18,10 +18,10 @@ const BookAcceptPage = async ({ searchParams }) => {
         <thead>
           <tr>
             <td>ทะเบียน</td>
-            <td>รายละเอียด</td>
+            <td>เรื่อง</td>
+            <td>ลงวัรที่</td>
             <td>จาก</td>
             <td>ถึง</td>
-            <td>ผู้จ่าย</td>
           </tr>
         </thead>
         <tbody>
@@ -31,9 +31,9 @@ const BookAcceptPage = async ({ searchParams }) => {
                 <div className={styles.product}>{bookaccept.title}</div>
               </td>
               <td>{bookaccept.desc}</td>
-              <td>{bookaccept.desc2}</td>
               <td>{bookaccept.desc3}</td>
               <td>{bookaccept.desc4}</td>
+              <td>{bookaccept.desc5}</td>
             </tr>
           ))}
         </tbody>
