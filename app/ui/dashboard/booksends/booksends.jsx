@@ -3,8 +3,8 @@ import Pagination from "@/app/ui/dashboard/pagination/pagination";
 import { fetchBooksends } from "@/app/lib/data";
 
 const BookSendsPage = async ({ searchParams }) => {
-  const q = searchParams?.q || "";
-  const page = searchParams?.page || 1;
+//  const q = searchParams?.q || "";
+//  const page = searchParams?.page || 1;
   const { count, booksends } = await fetchBooksends(q, page);
 
   return (
