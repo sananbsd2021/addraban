@@ -19,7 +19,7 @@ const BookAcceptPage = async ({ searchParams }) => {
           <tr>
             <td>ทะเบียน</td>
             <td>เรื่อง</td>
-            <td>ลงวัรที่</td>
+            <td>ลงวันที่</td>
             <td>จาก</td>
             <td>ถึง</td>
           </tr>
