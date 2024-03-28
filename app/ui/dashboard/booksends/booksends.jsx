@@ -18,10 +18,10 @@ const BookSendsPage = async ({ searchParams }) => {
         <thead>
           <tr>
             <td>ทะเบียน</td>
-            <td>รายละเอียด</td>
-            <td>หน่วยงาน</td>
-            <td>ผู้รับ</td>
-            <td>ผู้จ่าย</td>
+            <td>เรื่อง</td>
+            <td>ลงวันที่</td>
+            <td>จาก</td>
+            <td>ถึง</td>
           </tr>
         </thead>
         <tbody>
