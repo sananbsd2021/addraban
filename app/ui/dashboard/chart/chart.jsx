@@ -70,7 +70,7 @@ const Chart = () => {
           <Legend />
           <Line type="monotone" dataKey="หนังสือส่ง" stroke="#8884d8" strokeDasharray="5 5" />
           <Line type="monotone" dataKey="หนังสือรับ" stroke="#82ca9d" strokeDasharray="3 4 5 2" />
-          <Line type="monotone" dataKey="หนังสือส่ง" stroke="#7784d8" strokeDasharray="7 7" />
+          <Line type="monotone" dataKey="บันทึกข้อความ" stroke="#7784d8" strokeDasharray="7 7" />
         </LineChart>
       </ResponsiveContainer>
     </div>
