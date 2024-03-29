@@ -8,36 +8,43 @@ const data = [
     name: "Sun",
     หนังสือส่ง: 4000,
     หนังสือรับ: 2400,
+    บันทึกข้อความ: 2300,
   },
   {
     name: "Mon",
     หนังสือส่ง: 3000,
     หนังสือรับ: 1398,
+    บันทึกข้อความ: 2400,
   },
   {
     name: "Tue",
     หนังสือส่ง: 2000,
     หนังสือรับ: 3800,
+    บันทึกข้อความ: 2100,    
   },
   {
     name: "Wed",
     หนังสือส่ง: 2780,
     หนังสือรับ: 3908,
+    บันทึกข้อความ: 2200,
   },
   {
     name: "Thu",
     หนังสือส่ง: 1890,
     หนังสือรับ: 4800,
+    บันทึกข้อความ: 2500,
   },
   {
     name: "Fri",
     หนังสือส่ง: 2390,
     หนังสือรับ: 3800,
+    บันทึกข้อความ: 2600,
   },
   {
     name: "Sat",
     หนังสือส่ง: 3490,
     หนังสือรับ: 4300,
+    บันทึกข้อความ: 2300,
   },
 ];
 
@@ -63,6 +70,7 @@ const Chart = () => {
           <Legend />
           <Line type="monotone" dataKey="หนังสือส่ง" stroke="#8884d8" strokeDasharray="5 5" />
           <Line type="monotone" dataKey="หนังสือรับ" stroke="#82ca9d" strokeDasharray="3 4 5 2" />
+          <Line type="monotone" dataKey="หนังสือส่ง" stroke="#7784d8" strokeDasharray="5 5" />
         </LineChart>
       </ResponsiveContainer>
     </div>
