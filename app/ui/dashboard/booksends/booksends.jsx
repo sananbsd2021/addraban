@@ -11,7 +11,7 @@ const BookSendsPage = async ({ searchParams }) => {
   return (
     <div className={styles.container}>
       <div className={styles.top}>
-        <Search placeholder="Search for a booksends..." />
+        <Search placeholder="......" />
         <div>หนังสือส่ง</div>
       </div>
       <table className={styles.table}>
