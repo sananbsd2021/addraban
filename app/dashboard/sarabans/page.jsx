@@ -13,7 +13,7 @@ const ProductsPage = async ({ searchParams }) => {
   return (
     <div className={styles.container}>
       <div className={styles.top}>
-        <Search placeholder="Search for a Saraban..." />
+        <Search placeholder="......" />
         <Link href="/dashboard/sarabans/add">
           <button className={styles.addButton}>Add New</button>
         </Link>
