@@ -464,7 +464,7 @@ export const deleteBooksend = async (formData) => {
 
 // Add Bookaccept
 export const addBookaccept = async (formData) => {
-  const { title, desc, desc2, desc3, desc4, desc5,desc6, year } = Object.fromEntries(formData);
+  const { title, desc, desc2, desc3, desc4, desc5, desc6, year } = Object.fromEntries(formData);
 
   try {
     connectToDB();
@@ -492,7 +492,7 @@ export const addBookaccept = async (formData) => {
 
 // Update Bookaccept
 export const updateBookaccept = async (formData) => {
-  const { id, title, desc, desc2, desc3, desc4, year} = Object.fromEntries(formData);
+  const { id, title, desc, desc2, desc3, desc4, desc5, desc6, year} = Object.fromEntries(formData);
 
   try {
     connectToDB();
@@ -503,6 +503,8 @@ export const updateBookaccept = async (formData) => {
       desc2,
       desc3,
       desc4,
+      desc5,
+      desc6,
       year,
     };
 
