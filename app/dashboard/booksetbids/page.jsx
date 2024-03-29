@@ -13,7 +13,7 @@ const BooksetbidsPage = async ({ searchParams }) => {
   return (
     <div className={styles.container}>
       <div className={styles.top}>
-        <Search placeholder="Search for a Booksetbid..." />
+        <Search placeholder="......" />
         <Link href="/dashboard/booksetbids/add">
           <button className={styles.addButton}>Add New</button>
         </Link>
