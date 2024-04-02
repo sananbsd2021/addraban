@@ -43,11 +43,11 @@ const ProductsPage = async ({ searchParams }) => {
               <td>{saraban.desc4}</td>
               <td>
                 <div className={styles.buttons}>
-                  <Link href={`/dashboard/sarabans/${saraban.id}`}>
-                    <button className={`${styles.button} ${styles.view}`}>
+          {/*         <Link href={`/dashboard/bookaccept/${bookaccept.id}`}>
+                        <button className={`${styles.button} ${styles.view}`}>
                       View
                     </button>
-                  </Link>
+                  </Link> */}
                   <form action={deleteSaraban}>
                     <input type="hidden" name="id" value={saraban.id} />
                     <button className={`${styles.button} ${styles.delete}`}>
