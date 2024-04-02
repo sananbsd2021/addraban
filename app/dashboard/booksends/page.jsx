@@ -47,11 +47,11 @@ const BookSendsPage = async ({ searchParams }) => {
               <td>{booksend.desc6}</td>
               <td>
                 <div className={styles.buttons}>
-                  <Link href={`/dashboard/booksends/${booksend.id}`}>
-                    <button className={`${styles.button} ${styles.view}`}>
+          {/*         <Link href={`/dashboard/bookaccept/${bookaccept.id}`}>
+                        <button className={`${styles.button} ${styles.view}`}>
                       View
                     </button>
-                  </Link>
+                  </Link> */}
                   <form action={deleteBooksend}>
                     <input type="hidden" name="id" value={booksend.id} />
                     <button className={`${styles.button} ${styles.delete}`}>
