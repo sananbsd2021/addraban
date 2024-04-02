@@ -41,11 +41,11 @@ const BooksetbidsPage = async ({ searchParams }) => {
               <td>{booksetbid.desc3}</td>
               <td>
                 <div className={styles.buttons}>
-                  <Link href={`/dashboard/booksetbids/${booksetbid.id}`}>
-                    <button className={`${styles.button} ${styles.view}`}>
+          {/*         <Link href={`/dashboard/bookaccept/${bookaccept.id}`}>
+                        <button className={`${styles.button} ${styles.view}`}>
                       View
                     </button>
-                  </Link>
+                  </Link> */}
                   <form action={deleteBooksetbid}>
                     <input type="hidden" name="id" value={booksetbid.id} />
                     <button className={`${styles.button} ${styles.delete}`}>
