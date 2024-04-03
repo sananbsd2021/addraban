@@ -144,6 +144,9 @@ const sarabanSchema = new mongoose.Schema(
     desc4: {
       type: String,
     },    
+    year: {
+      type: String,
+    },    
   },
   { timestamps: true }
 );    
