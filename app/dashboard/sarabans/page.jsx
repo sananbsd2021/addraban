@@ -13,7 +13,7 @@ const ProductsPage = async ({ searchParams }) => {
   return (
     <div className={styles.container}>
       <div className={styles.top}>
-        <Search placeholder="Search for a product..." />
+        <Search placeholder="......" />
         <Link href="/dashboard/sarabans/add">
           <button className={styles.addButton}>Add New</button>
         </Link>
@@ -40,7 +40,6 @@ const ProductsPage = async ({ searchParams }) => {
               <td>{saraban.desc}</td>
               <td>{saraban.desc2}</td>
               <td>{saraban.year}</td>
-              <td>{saraban.createdAt?.toString().slice(4, 16)}</td>
               <td>
                 <div className={styles.buttons}>
                   <Link href={`/dashboard/sarabans/${saraban.id}`}>
