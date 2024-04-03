@@ -55,7 +55,7 @@ const BookSendsPage = async ({ searchParams }) => {
                   <form action={deleteBooksend}>
                     <input type="hidden" name="id" value={booksend.id} />
                     <button className={`${styles.button} ${styles.delete}`}>
-                      Delete
+                      ลบ
                     </button>
                   </form>
                 </div>
