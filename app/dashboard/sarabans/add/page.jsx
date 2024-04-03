@@ -15,6 +15,7 @@ const AddSarabanPage = () => {
           ></textarea>
         <input type="desc3" placeholder="หน่วยงาน" name="desc3" />
         <input type="desc4" placeholder="การปฏิบัติ" name="desc4" />
+        <input type="year" placeholder="ปี พ.ศ." name="year" />
         <button type="submit">Submit</button>
       </form>
     </div>
