@@ -15,7 +15,7 @@ const BookAcceptPage = async ({ searchParams }) => {
       <div className={styles.top}>
         <Search placeholder="......" />
         <Link href="/dashboard/bookaccept/add">
-          <button className={styles.addButton}>Add New</button>
+          <button className={styles.addButton}>เพิ่มข้อมูล</button>
         </Link>
       </div>
       <table className={styles.table}>
