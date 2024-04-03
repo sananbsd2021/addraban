@@ -6,7 +6,7 @@ const AddSarabanPage = () => {
     <div className={styles.container}>
       <form action={addSaraban} className={styles.form}>
         <input type="text" placeholder="เลขทะเบียน" name="title" required />
-        <input type="text" placeholder="ลงวันที่" name="desc2" />
+        <input type="date" placeholder="ลงวันที่" name="desc2" />
         <textarea
             name="desc"
             id="desc"
