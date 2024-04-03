@@ -13,20 +13,19 @@ const ProductsPage = async ({ searchParams }) => {
   return (
     <div className={styles.container}>
       <div className={styles.top}>
-        <Search placeholder="......" />
+        <Search placeholder="Search for a product..." />
         <Link href="/dashboard/sarabans/add">
-          <button className={styles.addButton}>เพิ่มข้อมูล</button>
+          <button className={styles.addButton}>Add New</button>
         </Link>
       </div>
       <table className={styles.table}>
         <thead>
           <tr>
             <td>เลขทะเบียน</td>
-            <td>ลงวันที่</td>
-            <td>เรื่อง</td>
+            <td>รายละเอียด</td>
             <td>หน่วยงาน</td>
-            <td>การปฏิบัติ</td>
-            <td>ปี พ.ศ.<td/>
+            <td>ปี พ.ศ.</td>
+            <td>Created At</td>
             <td>Action</td>
           </tr>
         </thead>
@@ -40,20 +39,19 @@ const ProductsPage = async ({ searchParams }) => {
               </td>
               <td>{saraban.desc}</td>
               <td>{saraban.desc2}</td>
-              <td>{saraban.desc3}</td>
-              <td>{saraban.desc4}</td>
-
+              <td>{saraban.year}</td>
+              <td>{saraban.createdAt?.toString().slice(4, 16)}</td>
               <td>
                 <div className={styles.buttons}>
-          {/*         <Link href={`/dashboard/bookaccept/${bookaccept.id}`}>
-                        <button className={`${styles.button} ${styles.view}`}>
+                  <Link href={`/dashboard/sarabans/${saraban.id}`}>
+                    <button className={`${styles.button} ${styles.view}`}>
                       View
                     </button>
-                  </Link> */}
+                  </Link>
                   <form action={deleteSaraban}>
                     <input type="hidden" name="id" value={saraban.id} />
                     <button className={`${styles.button} ${styles.delete}`}>
-                      ลบ
+                      Delete
                     </button>
                   </form>
                 </div>
