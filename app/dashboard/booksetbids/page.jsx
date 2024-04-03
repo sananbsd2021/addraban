@@ -49,7 +49,7 @@ const BooksetbidsPage = async ({ searchParams }) => {
                   <form action={deleteBooksetbid}>
                     <input type="hidden" name="id" value={booksetbid.id} />
                     <button className={`${styles.button} ${styles.delete}`}>
-                      Delete
+                      ลบ
                     </button>
                   </form>
                 </div>
