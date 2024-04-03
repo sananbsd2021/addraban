@@ -22,10 +22,10 @@ const ProductsPage = async ({ searchParams }) => {
         <thead>
           <tr>
             <td>เลขทะเบียน</td>
-            <td>รายละเอียด</td>
+            <td>เรื่อง</td>
+            <td>ลงวันที่</td>
+            <td>การปฏิบัติ</td>
             <td>หน่วยงาน</td>
-            <td>ปี พ.ศ.</td>
-            <td>Created At</td>
             <td>Action</td>
           </tr>
         </thead>
@@ -39,7 +39,7 @@ const ProductsPage = async ({ searchParams }) => {
               </td>
               <td>{saraban.desc}</td>
               <td>{saraban.desc2}</td>
-              <td>{saraban.year}</td>
+              <td>{saraban.desc3}</td>
               <td>
                 <div className={styles.buttons}>
                   <Link href={`/dashboard/sarabans/${saraban.id}`}>
