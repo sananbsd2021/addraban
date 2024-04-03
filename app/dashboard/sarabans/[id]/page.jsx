@@ -33,6 +33,8 @@ const SingleProductPage = async ({ params }) => {
           <input type="text" name="desc3" placeholder={saraban.desc3} />
           <label>การปฏิบัติ</label>
           <input type="text" name="desc4" placeholder={saraban.desc4} />
+          <label>ปี พ.ศ.</label>
+          <input type="text" name="year" placeholder={saraban.year} />
           <button>Update</button>
         </form>
       </div>
