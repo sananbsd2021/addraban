@@ -145,7 +145,7 @@ const sarabanSchema = new mongoose.Schema(
       type: String,
     },
     year: {
-      type: Date,
+      type: String,
     },
   },
   { timestamps: true }
