@@ -102,7 +102,7 @@ export const fetchSarabans = async (q, page) => {
   try {
     connectToDB();
     const count = await Saraban.find({ title: { $regex: regex } }).count();
-    const sarabans = await Saraban.find().sort({"_id": -1})
+    const sarabans = await Saraban.find().sort({"title": -1})
       .limit(ITEM_PER_PAGE)
       .skip(ITEM_PER_PAGE * (page - 1));
     return { count, sarabans };
