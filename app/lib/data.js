@@ -133,7 +133,7 @@ export const fetchBooksends = async (q, page) => {
   try {
     connectToDB();
     const count = await Booksend.find({ desc: { $regex: regex } }).count();
-    const booksends = await Booksend.find().sort({"_id": -1})
+    const booksends = await Booksend.find().sort({"title": -1})
       .limit(ITEM_PER_PAGE)
       .skip(ITEM_PER_PAGE * (page - 1));
     return { count, booksends };
@@ -164,7 +164,7 @@ export const fetchBookaccepts = async (q, page) => {
   try {
     connectToDB();
     const count = await Bookaccept.find({ title: { $regex: regex } }).count();
-    const bookaccepts = await Bookaccept.find().sort({"_id": -1})
+    const bookaccepts = await Bookaccept.find().sort({"title": -1})
       .limit(ITEM_PER_PAGE)
       .skip(ITEM_PER_PAGE * (page - 1));
     return { count, bookaccepts };
@@ -196,7 +196,7 @@ export const fetchBooksetbids = async (q, page) => {
   try {
     connectToDB();
     const count = await Booksetbid.find({ desc: { $regex: regex } }).count();
-    const booksetbids = await Booksetbid.find().sort({"_id": -1})
+    const booksetbids = await Booksetbid.find().sort({"title": -1})
       .limit(ITEM_PER_PAGE)
       .skip(ITEM_PER_PAGE * (page - 1));
     return { count, booksetbids };
@@ -227,7 +227,7 @@ export const fetchPalads = async (q, page) => {
   try {
     connectToDB();
     const count = await Palad.find({ desc: { $regex: regex } }).count();
-    const Palads = await Palad.find().sort({"_id": -1})
+    const Palads = await Palad.find().sort({"title": -1})
       .limit(ITEM_PER_PAGE)
       .skip(ITEM_PER_PAGE * (page - 1));
     return { count, palads };
