@@ -49,7 +49,7 @@ const BookSendsPage = async ({ searchParams }) => {
                 <div className={styles.buttons}>
                    <Link href={`/dashboard/bookaccept/${bookaccept.id}`}>
                         <button className={`${styles.button} ${styles.view}`}>
-                      View
+                      แก้ไข
                     </button>
                   </Link> 
                   <form action={deleteBooksend}>
