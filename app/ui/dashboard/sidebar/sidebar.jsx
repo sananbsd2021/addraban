@@ -49,11 +49,11 @@ const menuItems = [
         path: "/dashboard/booksends",
         icon: <MdAttachMoney />,
       },
-//      {
-//        title: "บันทึกข้อความ",
-//        path: "/dashboard/sarabans",
-//        icon: <MdAttachMoney />,
-//      },
+      {
+        title: "บันทึกข้อความ",
+        path: "/dashboard/sarabans",
+        icon: <MdAttachMoney />,
+      },
       {
         title: "ที่คำสั่ง",
         path: "/dashboard/booksetbids",
