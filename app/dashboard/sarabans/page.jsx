@@ -5,7 +5,7 @@ import Pagination from "@/app/ui/dashboard/pagination/pagination";
 import { fetchSarabans } from "@/app/lib/data";
 import { deleteSaraban } from "@/app/lib/actions";
 
-const ProductsPage = async ({ searchParams }) => {
+const SarabansPage = async ({ searchParams }) => {
   const q = searchParams?.q || "";
   const page = searchParams?.page || 1;
   const { count, sarabans } = await fetchSarabans(q, page);
@@ -40,6 +40,7 @@ const ProductsPage = async ({ searchParams }) => {
               <td>{saraban.desc}</td>
               <td>{saraban.desc2}</td>
               <td>{saraban.desc3}</td>
+              <td>{saraban.year}</td>
               <td>
                 <div className={styles.buttons}>
                   <Link href={`/dashboard/sarabans/${saraban.id}`}>
@@ -64,4 +65,4 @@ const ProductsPage = async ({ searchParams }) => {
   );
 };
 
-export default ProductsPage;
+export default SarabansPage;
