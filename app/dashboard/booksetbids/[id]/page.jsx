@@ -3,7 +3,7 @@ import { fetchBooksetbid } from "@/app/lib/data";
 import styles from "@/app/ui/dashboard/products/singleProduct/singleProduct.module.css";
 import Image from "next/image";
 
-const SingleBooksetbidPage = async ({ params }) => {
+const SingleBooksetbidePage = async ({ params }) => {
   const { id } = params;
   const booksetbid = await fetchBooksetbid(id);
 
@@ -31,6 +31,8 @@ const SingleBooksetbidPage = async ({ params }) => {
           <input type="text" name="desc2" placeholder={booksetbid.desc2} />
           <label>หน่วยงาน</label>
           <input type="text" name="desc3" placeholder={booksetbid.desc3} />
+          <label>ปี พ.ศ.</label>
+          <input type="text" name="year" placeholder={booksetbid.year} />
           <button>Update</button>
         </form>
       </div>
@@ -38,5 +40,4 @@ const SingleBooksetbidPage = async ({ params }) => {
   );
 };
 
-export default SingleBooksetbidPage;
-
+export default SingleBooksetbidePage;
