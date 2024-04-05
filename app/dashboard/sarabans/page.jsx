@@ -45,13 +45,13 @@ const SarabansPage = async ({ searchParams }) => {
                 <div className={styles.buttons}>
                   <Link href={`/dashboard/sarabans/${saraban.id}`}>
                     <button className={`${styles.button} ${styles.view}`}>
-                      View
+                      แก้ไข
                     </button>
                   </Link>
                   <form action={deleteSaraban}>
                     <input type="hidden" name="id" value={saraban.id} />
                     <button className={`${styles.button} ${styles.delete}`}>
-                      Delete
+                      ลบ
                     </button>
                   </form>
                 </div>
