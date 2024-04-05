@@ -5,7 +5,7 @@ import Pagination from "@/app/ui/dashboard/pagination/pagination";
 import { fetchBooksetbids } from "@/app/lib/data";
 import { deleteBooksetbid } from "@/app/lib/actions";
 
-const BooksetbidsPage = async ({ searchParams }) => {
+const BookSetbidsPage = async ({ searchParams }) => {
   const q = searchParams?.q || "";
   const page = searchParams?.page || 1;
   const { count, booksetbids } = await fetchBooksetbids(q, page);
@@ -21,10 +21,17 @@ const BooksetbidsPage = async ({ searchParams }) => {
       <table className={styles.table}>
         <thead>
           <tr>
+            {/* <td>ที่คำสั่ง</td>
+            <td>เรื่อง</td>
+            <td>ลงวันที่</td>
+            <td>หน่วยงาน</td>
+            <td>Actions</td> */}
+
             <td>ที่คำสั่ง</td>
             <td>เรื่อง</td>
             <td>ลงวันที่</td>
             <td>หน่วยงาน</td>
+            <td>ปี พ.ศ.</td>
             <td>Action</td>
           </tr>
         </thead>
@@ -32,17 +39,16 @@ const BooksetbidsPage = async ({ searchParams }) => {
           {booksetbids.map((booksetbid) => (
             <tr key={booksetbid.id}>
               <td>
-                <div className={styles.product}>
-                  {booksetbid.title}
-                </div>
+                <div className={styles.product}>{booksetbid.title}</div>
               </td>
               <td>{booksetbid.desc}</td>
               <td>{booksetbid.desc2}</td>
               <td>{booksetbid.desc3}</td>
+              <td>{booksetbid.year}</td>
               <td>
                 <div className={styles.buttons}>
-                   <Link href={`/dashboard/bookaccept/${bookaccept.id}`}>
-                        <button className={`${styles.button} ${styles.view}`}>
+                  <Link href={`/dashboard/booksetbids/${booksetbid.id}`}>
+                    <button className={`${styles.button} ${styles.view}`}>
                       แก้ไข
                     </button>
                   </Link>
@@ -54,7 +60,6 @@ const BooksetbidsPage = async ({ searchParams }) => {
                   </form>
                 </div>
               </td>
-              
             </tr>
           ))}
         </tbody>
@@ -64,4 +69,4 @@ const BooksetbidsPage = async ({ searchParams }) => {
   );
 };
 
-export default BooksetbidsPage;
+export default BookSetbidsPage;
