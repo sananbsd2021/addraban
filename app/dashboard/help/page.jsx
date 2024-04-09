@@ -2,7 +2,11 @@ import React from 'react'
 
 const HelpPage = () => {
   return (
-    <div>Help Page</div>
+    <div>
+      <h1>
+           Help Page 
+      </h1>
+    </div>
   )
 }
 
