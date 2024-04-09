@@ -27,7 +27,7 @@ const BookSetbidsPage = async ({ searchParams }) => {
             <td>หน่วยงาน</td>
             <td>Actions</td> */}
 
-            <td>ที่คำสั่ง</td>
+            <td>เลขคำสั่ง</td>
             <td>เรื่อง</td>
             <td>ลงวันที่</td>
             <td>หน่วยงาน</td>
