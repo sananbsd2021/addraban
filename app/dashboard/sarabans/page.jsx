@@ -41,7 +41,7 @@ const SarabansPage = async ({ searchParams }) => {
               <td>{saraban.desc2}</td>
               <td>{saraban.desc3}</td>
               <td>{saraban.year}</td>
-              <td>
+              {/*            <td>
                 <div className={styles.buttons}>
                   <Link href={`/dashboard/sarabans/${saraban.id}`}>
                     <button className={`${styles.button} ${styles.view}`}>
@@ -55,7 +55,7 @@ const SarabansPage = async ({ searchParams }) => {
                     </button>
                   </form>
                 </div>
-              </td>
+              </td> */}
             </tr>
           ))}
         </tbody>
