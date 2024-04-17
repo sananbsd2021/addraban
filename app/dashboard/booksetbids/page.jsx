@@ -39,7 +39,7 @@ const BookSetbidsPage = async ({ searchParams }) => {
               <td>{booksetbid.desc2}</td>
               <td>{booksetbid.desc3}</td>
               <td>{booksetbid.year}</td>
-              <td>
+{/*       <td>
                 <div className={styles.buttons}>
                   <Link href={`/dashboard/booksetbids/${booksetbid.id}`}>
                     <button className={`${styles.button} ${styles.view}`}>
@@ -53,7 +53,7 @@ const BookSetbidsPage = async ({ searchParams }) => {
                     </button>
                   </form>
                 </div>
-              </td>
+              </td> */}
             </tr>
           ))}
         </tbody>
