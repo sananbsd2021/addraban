@@ -26,7 +26,7 @@ const SarabansPage = async ({ searchParams }) => {
             <td>ลงวันที่</td>
             <td>การปฏิบัติ</td>
             <td>หน่วยงาน</td>
-            <td>Action</td>
+            {/*         <td>Action</td> */}
           </tr>
         </thead>
         <tbody>
