@@ -28,7 +28,7 @@ const BookAcceptPage = async ({ searchParams }) => {
             <td>ถึง</td>
             <td>เรื่อง</td>
             <td>การปฎิบัติ</td>
-            {/*         <td>Action</td> */}
+            <td>Action</td>
           </tr>
         </thead>
         <tbody>
