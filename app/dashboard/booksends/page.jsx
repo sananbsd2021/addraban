@@ -28,7 +28,7 @@ const BookSendsPage = async ({ searchParams }) => {
             <td>ถึง</td>
             <td>เรื่อง</td>
             <td>การปฎิบัติ</td>
-            {/*         <td>Action</td> */}
+            <td>Action</td>
           </tr>
         </thead>
         <tbody>
@@ -45,7 +45,7 @@ const BookSendsPage = async ({ searchParams }) => {
               <td>{booksend.desc5}</td>
               <td>{booksend.desc}</td>
               <td>{booksend.desc6}</td>
-          {/*          <td>
+                    <td>
                 <div className={styles.buttons}>
                   <Link href={`/dashboard/booksends/${booksend.id}`}>
                     <button className={`${styles.button} ${styles.view}`}>
@@ -59,7 +59,7 @@ const BookSendsPage = async ({ searchParams }) => {
                     </button>
                   </form>
                 </div>
-              </td> */}
+              </td>
             </tr>
           ))}
         </tbody>
